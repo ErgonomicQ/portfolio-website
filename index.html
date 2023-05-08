@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="reset.css"> -->
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="./assets/reset.css"> -->
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Welcome!</title>
   </head>
   <body>
     <nav>
         <h2>Cody Cooke</h2>
       <ul>
-        <li>About</li>
-        <li>Work</li>
-        <li>Contact Me</li>
+        <li> <a href="#about">About</a></li>
+        <li> <a href="#work">Work</a></li>
+        <li> <a href="#contact">Contact Me</a></li>
       </ul>
     </nav>
     <header>
@@ -31,11 +31,11 @@
     <!-- creating individual sections for the About, Work Links, and Contact information. -->
     <!-- <div> added to each container for CSS formatting, will need to do @media for a flex-wrap due to smaller screen sizes -->
     <section>
-      <h2>About Me</h2>
+      <h2 id="about">About Me</h2>
         <p>Paragraph 1</p>
     </section>
     <section>
-        <h2>Work</h2>
+        <h2 id="work">Work</h2>
       <div>
         <h3>Heading 2</h3>
         <img src="placeholder2.jpg" alt="Placeholder 2">
@@ -61,7 +61,7 @@
     <!-- Contact Me Section contains a mailto: anchor, will open outlook or the default email application user has installed -->
     <!--Mobile users will open their default mailing app when clicking on the email link-->
     <section>
-        <h2>Contact Me</h2>
+        <h2 id="contact">Contact Me</h2>
         <ul>
             <li>phone number</li>
             <li><a href= "mailto:c.s.cooke89@gmail.com">email</a></li>
