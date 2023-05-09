@@ -1,33 +1,79 @@
 /* Reminder to add smooth scrolling behavior to the HTML, Flex-boxing content, and @media rules for mobile screens */
 /* *{
-    font-size: 16px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
-    background-color:  rgb(239, 149, 117) ;
-} */
+    background-color:  rgb(239, 149, 117) ; */
+html, body{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
 
 nav{
     display: flex;
-    align-items: center;
+    /* flex-wrap: wrap; */
+    justify-content: flex-end;
+    
 }
 
-li{
-    display: inline-block;
-    
+nav li{
+    display: inline;
+    float: right;
+    margin: 1%;
+    font-size:larger;
+}
+
+li a{
+    text-decoration: none;
 }
 
 
 .top-bar {
     background-image: linear-gradient(rgb(148, 127, 127), #000);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     width: 100vw  
 }
 
+.top-bar h1{
+    text-align: left;
+    position: relative;
+    top: 35px;
+    font-size: 200%;
+    color: rgb(166, 127, 68);
+}
+
 .beach-banner{
-    background-image: url("./assets/beach.jpg");
-    background-size: contain;
+    background-image:url("./beach.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    width: 100vw;  
+    width: 100vw;
+    height: 34vh;
+    
+border-radius: 10px;
+box-shadow: 7px 4px 4px rgb(148, 127, 127);
 }
+
+.beach-banner p{
+    float: right;
+    margin: 3%;
+}
+
+#avatar-border{
+background-image: url("./Avatar.png");
+background-repeat: no-repeat;
+background-position: left;
+width: 100vw;
+height: 34vh;
+bottom: 20px;
+position: relative;
+box-shadow: 4px 4px 4px #000;
+
+
+}
+
+@media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
+    }
+  }
