@@ -1,0 +1,33 @@
+/* Reminder to add smooth scrolling behavior to the HTML, Flex-boxing content, and @media rules for mobile screens */
+/* *{
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    background-color:  rgb(239, 149, 117) ;
+} */
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+li{
+    display: inline-block;
+    
+}
+
+
+.top-bar {
+    background-image: linear-gradient(rgb(148, 127, 127), #000);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    width: 100vw  
+}
+
+.beach-banner{
+    background-image: url("./assets/beach.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;  
+}
