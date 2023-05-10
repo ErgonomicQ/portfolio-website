@@ -11,47 +11,55 @@ nav{
     display: flex; 
 }
 
-#navbar{
-    font-size:larger;
-    text-align: right;
-}
 
- li{
-    display: inline;
- }
+
 #navbar a{
-    padding: 1%;
-    margin: 1%;
+    padding: 10px;
 }
 
 .top-bar {
-    flex: 4;
+    
     background-image: linear-gradient(rgb(148, 127, 127), #000);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
     width: 100vw;
 }
-ul{
+nav ul{
     list-style-type: none;
 }
 
-a{
-    text-decoration: none;
+nav li{
+    float: right;
+    
 }
 
+nav li a{
+ text-decoration: none;
+ display: block;
+ color: #fff;
+ text-align: center;
 
-/* main{
-    display: flex;
-    flex: wrap;
+}
 
-} */
+section h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #38bd50;
+    font-size: 45px;
+}
+
+.content-align{
+display:flex;
+align-items: center;
+}
+
+.content-align h2{
+    margin-right: 10px;
+    border-right: 4px solid #38bd50;
+    padding-right: 10px;
+}
 
 .top-bar h1{
-    text-align: left;
-    position: relative;
-    top: 35px;
-    left: 7px;
-    font-size: 200%;
+    float: left;
     color: rgb(166, 127, 68);
 }
 
@@ -82,8 +90,27 @@ border-radius: 6px;
 }
 
 @media screen and (max-width: 768px) {
-    nav {
+    nav ul {
+        display: flex;
       flex-direction: column ;
 
+    }
+    nav li{
+        float: none;
+    }
+
+    .top-bar h1{
+        display: flex;
+        flex-direction: column;
+        float: none;
+    }
+
+    main{ 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-align p{
+        flex-direction: center;
     }
   }
