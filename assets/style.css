@@ -45,7 +45,58 @@ section h2{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #38bd50;
     font-size: 45px;
+    
 }
+
+
+
+
+#card-container-main {
+    display: inline;
+    padding: 1%;
+    bottom: 100px;
+    
+
+    
+  }
+
+  
+ 
+  .image-container-large img {
+    width: 300px;
+    height: 300px;
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover; 
+    border-radius: 4px;
+  
+  }
+
+  .image-container-small img {
+    width: 300px;
+    height: 100px;
+    max-width: 300px;
+    max-height: 100px;
+    object-fit: cover; 
+    
+  }
+  
+  #content {
+    position: relative;
+    color: #000;
+    padding: 10px;
+    width: 10%;
+    background-color: #38bd50;
+    bottom: 10px;
+    
+  }
+  
+ /* .image-container-small  {
+    margin: 0;
+    padding: 0;
+  } */
+  
+
 
 .content-align{
 display:flex;
@@ -69,13 +120,20 @@ align-items: center;
     background-position: center;
     width: 100vw;
     height: 17vh;
-    box-shadow: 7px 4px 4px rgb(148, 127, 127);
+    box-shadow: 7px 4px 4px ;
 }
 
 .beach-banner p{
     float: right;
     margin: 3%;
+    top: 85px;
+    position: relative;
+    Color: #fff;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
 
 #avatar-border{
 width: 30%;
@@ -113,4 +171,32 @@ border-radius: 6px;
     .content-align p{
         flex-direction: center;
     }
+
+    
   }
+
+  @media screen and (max-height: 935px){
+  .beach-banner, #avatar-border{
+        display: none;
+    }
+
+}
+
+  @media screen and (max-width: 768px){
+    .beach-banner, #avatar-border{
+          display: flex;
+          flex-direction: center;
+      }
+
+      #avatar-border{
+        order: 0;
+        align-items: center;
+      }
+  
+      .beach-banner{
+        order: 1;
+      }
+      .image-container{
+        width:100%;
+      }
+    }
