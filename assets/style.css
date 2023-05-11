@@ -15,7 +15,7 @@ nav{
 
 
 #navbar a{
-    padding: 10px;
+    padding-right: 6px;
 }
 
 .top-bar {
@@ -25,24 +25,25 @@ nav{
     font-size: 20px;
     width: 100vw;
 }
-nav ul{
+
+ul{
     list-style-type: none;
+    display: flex;
+    justify-content: space-around;
 }
 
-nav li{
-    text-align: right;
-    
-}
 
 nav li a{
  text-decoration: none;
- display: inline-block;
+ display: flex;
  color: #fff;
- text-align: justify;
-vertical-align: middle;
+ vertical-align: middle;
+ justify-content:flex-end;
 }
 
-
+main{
+    justify-content: center;
+}
 
 section h2{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -51,10 +52,62 @@ section h2{
     
 }
 
+
+.contact li{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+
+.contact a{
+    text-decoration: none;
+    padding: 7px;
+    border-bottom: 3px solid #38bd50;
+    margin: 10px;
+}
+ #a-rules{
+    text-decoration: none;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #38bd50;
+    margin-right: 3px;
+   
+ }
+
+ #a-rules li{
+    box-shadow: inset 0 0 0 0 #38bd50;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out
+ }
+
+#a-rules:hover{
+    box-shadow:inset 100px 0 0 0 #38bd50;
+    color: #000000;
+}
+
+ a{
+    box-shadow: inset 0 0 0 0 #38bd50;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out
+ }
+
+ nav a:hover{
+    box-shadow:inset 100px 0 0 0 #38bd50;
+    color: #fff;
+ }
+
+ .contact a:hover{
+    box-shadow:inset 100px 0 0 0 #38bd50;
+    color: #000000;
+}
+
+
+
 .column {
     
-    max-width: 300px;
-    max-height: 100px;
     padding: 5px;
     box-sizing: border-box;
     display:flex
@@ -69,18 +122,15 @@ section h2{
     border: 5px solid #38bd50;
 }
 
-
-
-#row::after{
-    content: "";
-    clear: both;
-    display: table;
+.column a:hover{
+    opacity: 0.5;
 }
 
 .top-img{
-    max-width: 55%;
     padding: 5px;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
 .top-img img{
@@ -89,14 +139,20 @@ section h2{
     object-fit: cover;
     border: 5px solid #38bd50;
 }
- span[attribute="text"] {
 
+.top-img a:hover{
+    opacity: 0.5;
+
+}
+
+ span[attribute="text"] {
     position: relative;
     color: #000;
     background-color: #38bd50;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    
+    font-size: 20px; 
+    width: auto;
+    height: 20%;
  }
 
   
@@ -138,9 +194,9 @@ section h2{
 }
 
 .welcome{
-    text-align: right;
-    margin: 3%;
-    top: 85px;
+    display: flex;
+    justify-content: flex-end;
+    top: 70px;
     position: relative;
     Color: #000000;
     font-size: 25px;
@@ -150,23 +206,20 @@ section h2{
 
 
 #avatar-border{
-width: 30%;
-height: auto;
-max-width: 200px;
-min-width: 200px;
+    width:auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
 border: 3px solid #000;
 box-shadow: 5px 5px 5px #fff;
 border-radius: 6px;
+  
 
 
 }
 
 @media screen and (max-width: 768px) {
-    nav ul {
-        display: flex;
-      flex-direction: column ;
-
-    }
+    
 
     .top-bar h1{
         display: flex;
@@ -177,51 +230,70 @@ border-radius: 6px;
         display: flex;
         flex-direction: column;
     }
-    #navbar{
+     ul{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
     }
 
-.content-align{
+    .welcome{
+        justify-content: center;
+
+    }
+
+
+
+    .content-align{
     flex-direction: column;
-}
-.content-align h2{
+    }
+    
+    .content-align h2{
     border-right: 0;
-}
+    }
 
     .content-align p{
         flex-direction: center;
     }
 
+    .content-align li{
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+
     .column{
-        flex-direction: row;
+        flex-direction: column;
         column-count: 1;
-        align-items: center;
+
         
   }
+
+    .beach-banner{
+    display: flex;
+    justify-content: center;
+    }
+
+    #avatar-border{
+    display: none;
+    
 }
+
+}
+
 
   @media screen and (max-height: 935px){
   .beach-banner{
         display: none;
     }
 
+  #avatar-border{
+    display: none;
+  }  
+
+  .welcome{
+    display: none;
+  }
+
 }
 
-  @media screen and (max-width: 768px){
-    .beach-banner, #avatar-border{
-          display: flex;
-          flex-direction: center;
-      }
-
-      #avatar-border{
-        order: 0;
-        align-items: center;
-      }
   
-      .beach-banner{
-        order: 1;
-      }
-      .image-container{
-        width:100%;
-      }
-    }
