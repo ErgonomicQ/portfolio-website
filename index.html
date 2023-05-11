@@ -25,12 +25,13 @@
     </div>
     </nav>
         <!-- Top Banner just under the Nav Bar, contains the personal avatar, bannerimage and fun subtitle -->
-        <div class="beach-banner">
-          <p>It's wonderful to see you here!</p>
-          
-            <img src="assets\Avatar.png" alt="Avatar of Studio" id="avatar-border">
-         
-      </div>
+        <div class="beach-banner"></div>
+         <div class="welcome"> 
+         <span>It's wonderful to see you here!<span>
+          </div>
+          <img id="avatar-border" src="assets\Avatar.png" alt="Avatar of Studio">
+        
+      
     </header>
     <body>
       <main>
@@ -46,40 +47,34 @@
     <section class="content-align">
         <h2 id="work">Work</h2>
 
-      <article id="card-container">
-          <div class="image-container-large">
+      <article id="row">
+          <div class="top-img">
             <img src="assets\Calc.jpg" alt="calculator">
-            <div id="content">test script</div>
-          </div>
+            <span attribute="text">test text</span>
       </article>
 
-        <article id="card-container-main">
-          <div class="image-container-small"> 
+        <article id=row>
+          <div class="column"> 
              <img src="assets\lowpolyfish.jpg" alt="low poly fish">
-            <div id ="content">
-              test text
-            </div>
+            
+              <span attribute="text">test text</span>
+            
           </div>
-        </article>
-        <article id="card-container-main">
-          <div class="image-container-small">
-            <img src="assets\lowpolydog.jpg" alt="low poly dog">
-            <div id ="content">
-              test script
-            </div>
-          </div>
-          </article> 
-          <article id="card-container-main">
-          <div class="image-container-small">
-            <img src="assets\lowpolycat.jpg" alt="low poly cat">
-            <div id="content">
-              test script
-            </div>
-          </div>
-         </div> 
-        </article>
-           
         
+        
+          <div class="column">
+            <img src="assets\lowpolydog.jpg" alt="low poly dog">
+          
+            <span attribute="text">test text</span>
+          </div>
+          
+          
+          <div class="column">
+            <img src="assets\lowpolycat.jpg" alt="low poly cat">
+            <span attribute="text">test text</span>
+          </div>
+         
+      </article>
     </section>
     <!-- Contact Me Section contains a mailto: anchor, will open outlook or the default email application user has installed -->
     <!--Mobile users will open their default mailing app when clicking on the email link --->
